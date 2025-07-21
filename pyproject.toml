@@ -1,0 +1,19 @@
+[project]
+name = "extractor"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bibtexparser>=1.4.3",
+    "fastapi[standard]>=0.116.1",
+    "langchain>=0.3.26",
+    "langchain-text-splitters>=0.3.8",
+    "llama-index>=0.12.50",
+    "openai>=1.97.0",
+    "pdfplumber>=0.11.7",
+    "pydantic>=2.11.7",
+    "pymupdf4llm>=0.0.27",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.4",
+]

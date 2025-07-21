@@ -1,0 +1,8 @@
+### --- CRITICAL RULE FOR GITHUB ACTION OUTPUTS ---
+The structure of the 'outputs' object DEPENDS on the value of 'runs.using'. Follow this logic carefully:
+
+1.  If `runs.using` is `"composite"`, then EVERY item in the `outputs` object **MUST** have both a `description` AND a `value` key.
+    - Correct Example: `"outputs": { "my-output": { "description": "A result", "value": "${{ steps.some_step.outputs.result }}" } }`
+
+2.  If `runs.using` is `"docker"`, `"node12"`, `"node16"`, or `"node20"`, then items in the `outputs` object **MUST ONLY** have a `description` and **MUST NOT** have a `value` key.
+    - Correct Example: `"outputs": { "my-output": { "description": "A result" } }`

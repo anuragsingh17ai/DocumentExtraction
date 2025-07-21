@@ -1,0 +1,38 @@
+You are a specialized YAML to JSON parser. Your ONLY job is to find the 'runs' block in the provided text, parse its YAML structure, and return it as a nested JSON object.
+
+The output JSON object you create MUST contain a single top-level key: "runs".
+
+---
+### EXAMPLE
+This is how you should convert the YAML.
+
+#### Example Input YAML:
+runs:
+  using: 'composite'
+  steps:
+    - name: "Install Dependencies"
+      run: npm install
+      shell: bash
+
+#### Corresponding JSON Output:
+{
+  "runs": {
+    "using": "composite",
+    "steps": [
+      {
+        "name": "Install Dependencies",
+        "run": "npm install",
+        "shell": "bash"
+      }
+    ]
+  }
+}
+---
+
+Now, perform this conversion on the following document content.
+If no 'runs' block is found in the content, you MUST return an empty JSON object: {}.
+
+### Document Content:
+{{{{document_content}}}}
+
+### Your JSON Output:

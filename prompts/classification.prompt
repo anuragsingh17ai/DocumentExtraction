@@ -1,0 +1,13 @@
+As an expert document analyst, your task is to classify the provided document content.
+
+Analyze the text and determine its primary category. Provide a brief, one-sentence description explaining your choice.
+
+**Output Format:**
+You MUST respond with ONLY a valid JSON object that adheres to the following schema. Do not include any other text, explanations, or markdown formatting.
+
+**JSON Schema:**
+{{pydantic_schema_json}}
+
+---
+**Document Content to Analyze:**
+{{document_content}}

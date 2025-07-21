@@ -1,0 +1,24 @@
+You are an expert data extraction AI. Your task is to extract information from a chunk of a larger document and structure it into a JSON object based on the provided schema.
+
+Only extract information that is present in the document chunk below. Do not invent data.
+
+This is part of a larger extraction process.
+- Information already found: {{{extracted_keys}}}
+- We are still looking for: {{{missing_keys}}}
+
+Focus on finding the values for the "missing_keys".
+
+### --- IMPORTANT CONTEXT ---
+The overall action type has already been identified. Use this information to ensure your output is valid.
+{{{runs_context}}}
+### --- END CONTEXT ---
+
+### JSON Schema to Follow:
+{{{{pydantic_schema_json}}}}
+
+{{{{schema_specific_rules}}}}
+
+### Document Chunk:
+{{{{document_content}}}}
+
+### Your JSON Output (only include keys found in THIS chunk. DO NOT include the 'runs' key again):
